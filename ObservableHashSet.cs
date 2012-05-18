@@ -10,10 +10,13 @@ namespace System.Collections.Generic
     public sealed class ObservableHashSet<T> : HashSet<T>, INotifyCollectionChanged, INotifyPropertyChanged, ISet<T>
     {
         #region Fields
+
         private SimpleMonitor _monitor;
+
         #endregion
 
         #region Constructors
+
         public ObservableHashSet():base()
         {
             this._monitor = new SimpleMonitor();
